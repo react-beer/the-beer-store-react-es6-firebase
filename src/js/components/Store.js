@@ -23,29 +23,12 @@ class Store extends React.Component {
   }
 
   componentWillMount() {
-    base.syncState('beers', {
+    base.syncState('cart', {
       context: this,
-      state: 'beers',
-      queries: {
-        orderByValue: false
-      }
+      state: 'cart'
     });
 
     this.loadBeers();
-  }
-
-  componentDidMount() {
-    let localStorageData = localStorage.getItem('cart');
-
-    if (localStorageData) {
-      this.setState({
-        cart: JSON.parse(localStorageData)
-      });
-    }
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem('cart', JSON.stringify(nextState.cart));
   }
 
   loadBeers() {
@@ -62,7 +45,7 @@ class Store extends React.Component {
   }
 
   removeFromCart(key) {
-    delete this.state.cart[key];
+    this.state.cart[key] = null;
     this.setState({
       cart: this.state.cart
     });
