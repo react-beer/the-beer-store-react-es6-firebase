@@ -148,6 +148,7 @@ With the commands above, you have everything to start.
 - `gulp images`: Compress image files;
 - `gulp watch`: Call for watch files;
 - `gulp browser-sync`: Call for browsersync;
+- `gulp help`: Show help with gulp options;
 - `gulp deploy`: Deploy compiled files at `build/` to `github` on branch `gh-pages`.
 
 ## Browser Support
