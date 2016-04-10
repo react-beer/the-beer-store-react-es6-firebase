@@ -1,0 +1,148 @@
+/*! =========================================================================
+   1. COMPONENTS
+   ========================================================================= */
+
+/*! 1.1. TITLE
+   ========================================================================= */
+
+.header
+  position absolute
+  right 0
+  left 0
+  padding 40px
+  background url("../img/bg-header.jpg") repeat scroll center top transparent
+  background-size cover
+
+.neon
+  padding 25px 65px
+  font-family "Delius Unicase", cursive
+  font-size 3rem
+  color $light-neon
+  border 3px solid #fabbaa
+  border-radius 55px
+  box-shadow inset 0 0 6px #ba051a,
+             inset 0 0 40px rgba(186,5,26, .3),
+             inset 0 0 100px rgba(186,5,26, .5),
+             0 0 6px #ba051a,
+             0 0 40px rgba(186,5,26, .3),
+             0 0 100px rgba(186,5,26, .5)
+  text-shadow 0 0 5px $light-blue-neon,
+              0 0 10px $light-blue-neon,
+              0 0 10px $light-blue-neon,
+              0 0 80px rgba(49,139,247, .6),
+              0 0 100px rgba(49,139,247, .9)
+  text-align center
+  letter-spacing 2rem
+  text-transform uppercase
+
+.blink
+  display inline
+  animation blink 2.6s infinite
+
+@keyframes blink
+  0%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+  5%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon, 0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+  6%
+    color $black
+    text-shadow none
+  12%
+    color $black
+    text-shadow none
+  13%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+  25%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+  26%
+    color $black
+    text-shadow none
+  30%
+    color $black
+    text-shadow none
+  31%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+  100%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon, 0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+
+/*! 1.2. CART
+   ========================================================================= */
+
+.nav-cart
+  margin-top 250px
+
+.modal-title
+  font-weight bold
+
+.modal-footer
+  border none
+
+.modal-footer 
+  .total
+    font-weight bold
+
+.item-cart
+  padding 10px 10px
+  border-bottom 1px dashed #ccc
+
+.item-cart 
+  .title
+    font-weight bold
+    text-transform uppercase
+
+.item-cart 
+  .amount-price
+    font-size 1.5rem
+
+/*! 1.3. PRODUCTS
+   ========================================================================= */
+
+.products
+  margin-top 50px
+
+.products 
+  .product
+    margin-bottom 100px
+
+.product 
+  .title
+    font-weight bold
+    text-transform uppercase
+
+.product 
+  .box
+    margin-top 20px
+    margin-bottom 20px
+
+.product 
+  .price
+    font-size 1.4rem
+
+.product 
+  .btn-add-cart
+    font-weight bold
+    border-radius 0
+
+.product 
+  .sold-out
+    color $white
+    border none
+    border-radius 0
+    background #d12028
+    transform rotate(-10deg) scale(2) translateX(50%) translateY(-50%)
+
+.product 
+  .sold-out
+    &:hover
+      color $white
+      background #d12028
+
+.product 
+  .sold-out[disabled]
+    opacity 1

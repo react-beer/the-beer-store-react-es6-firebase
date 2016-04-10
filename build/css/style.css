@@ -1,0 +1,300 @@
+/*
+ * TABLE OF CONTENTS:
+ *
+ *  0. GLOBAL
+ *  1. COMPONENTS
+ *    - 1.1. TITLE
+ *    - 1.2. CART
+ *    - 1.3. PRODUCTS
+ *  2. FOOTER
+ *  3. RESPONSIVE
+ *    - 3.1. LARGE DEVICES, WIDE SCREENS
+ *    - 3.2. MEDIUM DEVICES, DESKTOPS
+ *    - 3.3. SMALL DEVICES, TABLETS LANDSCAPE
+ *    - 3.4. SMALL DEVICES, TABLETS PORTRAIT
+ *    - 3.5. EXTRA SMALL DEVICES, PHONES
+ *    - 3.6. CUSTOM, IPHONE RETINA
+ */
+/* =========================================================================
+   0. GLOBAL
+   ========================================================================= */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  color: #29251f;
+  background: #fff;
+}
+.debug {
+  border: 1px solid #000;
+}
+.fork-ribbon {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+/* =========================================================================
+   1. COMPONENTS
+   ========================================================================= */
+/* 1.1. TITLE
+   ========================================================================= */
+.header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 40px;
+  background: url("../img/bg-header.jpg") repeat scroll center top transparent;
+  background-size: cover;
+}
+.neon {
+  padding: 25px 65px;
+  font-family: "Delius Unicase", cursive;
+  font-size: 3rem;
+  color: #affcf4;
+  border: 3px solid #fabbaa;
+  border-radius: 55px;
+  box-shadow: inset 0 0 6px #ba051a, inset 0 0 40px rgba(186,5,26,.3), inset 0 0 100px rgba(186,5,26,.5), 0 0 6px #ba051a, 0 0 40px rgba(186,5,26,.3), 0 0 100px rgba(186,5,26,.5);
+  text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  text-align: center;
+  letter-spacing: 2rem;
+  text-transform: uppercase;
+}
+.blink {
+  display: inline;
+  -webkit-animation: blink 2.6s infinite;
+          animation: blink 2.6s infinite;
+}
+/* 1.2. CART
+   ========================================================================= */
+.nav-cart {
+  margin-top: 250px;
+}
+.modal-title {
+  font-weight: bold;
+}
+.modal-footer {
+  border: none;
+}
+.modal-footer .total {
+  font-weight: bold;
+}
+.item-cart {
+  padding: 10px 10px;
+  border-bottom: 1px dashed #ccc;
+}
+.item-cart .title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.item-cart .amount-price {
+  font-size: 1.5rem;
+}
+/* 1.3. PRODUCTS
+   ========================================================================= */
+.products {
+  margin-top: 50px;
+}
+.products .product {
+  margin-bottom: 100px;
+}
+.product .title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.product .box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.product .price {
+  font-size: 1.4rem;
+}
+.product .btn-add-cart {
+  font-weight: bold;
+  border-radius: 0;
+}
+.product .sold-out {
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  background: #d12028;
+  -webkit-transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);
+          transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);
+}
+.product .sold-out:hover {
+  color: #fff;
+  background: #d12028;
+}
+.product .sold-out[disabled] {
+  opacity: 1;
+}
+@-webkit-keyframes blink {
+  0% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+  5% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+  6% {
+    color: #000;
+    text-shadow: none;
+  }
+  12% {
+    color: #000;
+    text-shadow: none;
+  }
+  13% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+  25% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+  26% {
+    color: #000;
+    text-shadow: none;
+  }
+  30% {
+    color: #000;
+    text-shadow: none;
+  }
+  31% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+  100% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+}
+@keyframes blink {
+  0% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+  5% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+  6% {
+    color: #000;
+    text-shadow: none;
+  }
+  12% {
+    color: #000;
+    text-shadow: none;
+  }
+  13% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+  25% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+  26% {
+    color: #000;
+    text-shadow: none;
+  }
+  30% {
+    color: #000;
+    text-shadow: none;
+  }
+  31% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+  100% {
+    color: #affcf4;
+    text-shadow: 0 0 5px #318bf7, 0 0 10px #318bf7, 0 0 10px #318bf7, 0 0 80px rgba(49,139,247,.6), 0 0 100px rgba(49,139,247,.9);
+  }
+}
+/* =========================================================================
+   2. FOOTER
+   ========================================================================= */
+.footer {
+  text-align: center;
+}
+.love {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  font-size: 1.9rem;
+  color: #e74c3c;
+  -webkit-transform: scale(.9);
+          transform: scale(.9);
+  -webkit-animation: love .5s infinite linear alternate-reverse;
+          animation: love .5s infinite linear alternate-reverse;
+}
+@-webkit-keyframes love {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes love {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+/* =========================================================================
+   3. RESPONSIVE
+   ========================================================================= */
+/* 3.1 LARGE DEVICES, WIDE SCREENS
+   ========================================================================= */
+@media only screen and (max-width: 1200px) {
+  .product .sold-out {
+    margin-left: -35px;
+  }
+}
+/* 3.2 MEDIUM DEVICES, DESKTOPS
+   ========================================================================= */
+@media only screen and (max-width: 992px) {
+  .product .sold-out {
+    margin-right: 222px;
+    margin-left: 222px;
+  }
+}
+/* 3.3 SMALL DEVICES, TABLETS LANDSCAPE
+   ========================================================================= */
+@media only screen and (max-width: 768px) {
+  .product .sold-out {
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+}
+/* 3.4 SMALL DEVICES, TABLETS PORTRAIT
+   ========================================================================= */
+@media only screen and (max-width: 600px) {
+  .product .sold-out {
+    margin-right: 140px;
+    margin-left: 140px;
+  }
+}
+/* 3.5 EXTRA SMALL DEVICES, PHONES
+   ========================================================================= */
+@media only screen and (max-width: 480px) {
+  .nav-cart {
+    margin-top: 285px;
+  }
+  .product .sold-out {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}
+/* 3.6 CUSTOM, IPHONE RETINA
+   ========================================================================= */
+@media only screen and (max-width: 360px) {
+  .nav-cart {
+    margin-top: 280px;
+  }
+  .product .sold-out {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+}
